@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BS-Tutoriál</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Istok+Web&family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-body-secondary" data-bs-spy="scroll" data-bs-target="#navbarNavAltMarkup">
+<div class="container bg-body-tertiary">
+
+    <!-- Navigačný panel -->
+    <nav class="navbar navbar-expand-sm navbar-expand-md navbar-expand-lg navbar-expand-xl navbar-expand-xxl bg-body-navbar sticky-top rounded-4 dropshadow">
+        <div class="container-fluid">
+            <div class="navbar-title">
+                <!-- Logo -->
+                <img src="obr/nastavenia_ikona.png" class="d-block float-start w-5 rounded-4 me-3" alt="deka">
+                <!-- Názov stránky -->
+                <h1 class="text-primary-emphasis">Bootstrap Grid Tutorial</h1>
+            </div>
+            <div class="navbar-nav ms-auto">
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <!-- Navigačné odkazy -->
+                        <a class="nav-link text-primary-emphasis fs-3" href="index.html">Domov</a>
+                        <a class="nav-link text-primary-emphasis fs-3" href="quiz.html">Kvíz</a>
+                        <a class="nav-link text-primary-emphasis fs-3" href="contact.html">Kontakt</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Kontakt -->
+    <main class="container mt-5 text-primary-emphasis">
+        <h1>Kontaktujte nás</h1>
+        <form id="contactForm">
+            <div class="form-group text-primary-emphasis">
+                <label for="name">Meno:</label>
+                <input type="text" class="form-control text-primary-emphasis" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control text-primary-emphasis" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Správa:</label>
+                <textarea class="form-control text-primary-emphasis" id="message" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary text-primary-emphasis">Odoslať</button>
+        </form>
+    </main>
+
+    <!-- Sekcia päty stránky -->
+    <footer class="row">
+        <div class="col" id="koniec_stranky">
+            <p class="text-center text-primary-emphasis">Oliver Sovela</p>
+            <p class="text-center text-primary-emphasis">3.A - TEL</p>
+            <p class="text-center text-primary-emphasis">2024</p>
+        </div>
+    </footer>
+</div>
+
+<!-- Bootstrap JavaScript -->
+<script src="js/bootstrap.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+<!-- Skript pre inicializáciu Bootstrap Popover -->
+<script>
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl)
+    })
+</script>
+</body>
+</html>
